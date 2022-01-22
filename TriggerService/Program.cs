@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using TriggerService.Application.Handlers;
 using TriggerService.Application.Interfaces;
-using TriggerService.Application.Models.Events.Property;
 using TriggerService.Application.Services;
 using TriggerService.Domain.Models;
 using TriggerService.Infrastructure.Adapters;
@@ -19,10 +18,6 @@ builder.Services.AddTransient<IProgramService, ProgramServiceAdapter>();
 builder.Services.AddTransient<IConditionValidationService, ConditionValidationService>();
 builder.Services.AddTransient<IProgramTriggerRepository, ProgramTriggerRepository>();
 builder.Services.AddTransient<IEventHandler<TriggerEvent>, TriggerEventHandler>();
-builder.Services.AddTransient<IEventHandler<PropertySoldEvent>, PropertySoldEventHandler>();
-builder.Services.AddTransient<IEventHandler<PropertyUpcomingEvent>, PropertyUpcomingEventHandler>();
-builder.Services.AddTransient<IEventHandler<PropertyForSaleEvent>, PropertyForSaleEventHandler>();
-
 
 var app = builder.Build();
 app.UseSwagger();

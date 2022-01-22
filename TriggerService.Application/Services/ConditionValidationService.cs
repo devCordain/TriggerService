@@ -48,7 +48,6 @@ namespace TriggerService.Application.Services
                 {
                     programIds.Add(programTrigger.ProgramId);
                 }
-
             }
 
             return programIds;

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using TriggerService.Domain.Enums;
-using TriggerService.Domain.Models;
 
-namespace TriggerService.Application.Models.Conditions
+namespace TriggerService.Domain.Models
 {
     public class OfficeCondition : Condition
     {

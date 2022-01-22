@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using TriggerService.Application.Models.Conditions;
 
 namespace TriggerService.Domain.Models
 {

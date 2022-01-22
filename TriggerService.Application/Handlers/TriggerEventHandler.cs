@@ -1,11 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-using System.Reflection.Emit;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
 using TriggerService.Application.Interfaces;
-using TriggerService.Application.Models.Events.Property;
 using TriggerService.Domain.Enums;
 using TriggerService.Domain.Models;
 
@@ -13,18 +8,15 @@ namespace TriggerService.Application.Handlers
 {
     public class TriggerEventHandler : IEventHandler<TriggerEvent>
     {
-        private readonly IServiceProvider _serviceProvider;
         private IProgramTriggerRepository _programTriggerRepository;
         private IConditionValidationService _conditionValidationService;
         private IProgramService _programService;
 
         public TriggerEventHandler(
-            IServiceProvider serviceProvider, 
             IProgramTriggerRepository programTriggerRepository, 
             IConditionValidationService conditionValidationService, 
             IProgramService programService)
         {
-            _serviceProvider = serviceProvider;
             _programTriggerRepository = programTriggerRepository;
             _conditionValidationService = conditionValidationService;
             _programService = programService;

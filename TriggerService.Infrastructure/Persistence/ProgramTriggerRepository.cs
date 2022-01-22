@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using TriggerService.Application.Interfaces;
-using TriggerService.Application.Models.Conditions;
 using TriggerService.Application.Models.Subjects;
 using TriggerService.Domain.Enums;
 using TriggerService.Domain.Models;
